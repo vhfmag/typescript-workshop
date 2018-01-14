@@ -2,7 +2,11 @@
 	"name": "typescript-workshop",
 	"version": "0.0.1",
 	"description": "",
+	"bin": {
+		"typescript-workshop": "bin/typescript-workshop"
+	},
 	"main": "index.js",
+	"contributors": ["Victor Magalhães (https://github.com/vhfmag)"],
 	"scripts": {
 		"build": "tsc",
 		"start": "./bin/typescript-workshop",
@@ -11,10 +15,14 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/vhfmag/typescript-workshop"
+		"url": "git+https://github.com/vhfmag/typescript-workshop.git"
 	},
-	"author": "",
-	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/vhfmag/typescript-workshop/issues"
+	},
+	"homepage": "https://github.com/vhfmag/typescript-workshop#readme",
+	"author": "Victor Magalhães",
+	"license": "MIT",
 	"dependencies": {
 		"@types/node": "^9.3.0",
 		"chalk": "^2.3.0",
