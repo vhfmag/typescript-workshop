@@ -10,13 +10,13 @@ export function depedencyCheck(pkgName: string): CheckFunction {
 			return false;
 		}
 
-		const depedencies = Object.assign(
+		const dependencies = Object.assign(
 			{},
-			pkg.depedencies || {},
-			pkg.devDepedencies || {},
+			pkg.dependencies || {},
+			pkg.devDependencies || {},
 		);
 
-		if (Object.keys(depedencies).indexOf(pkgName) === -1) {
+		if (Object.keys(dependencies).indexOf(pkgName) === -1) {
 			messages.push(
 				"  - Dependency in package.json: " +
 					chalk.red(pkgName) +
