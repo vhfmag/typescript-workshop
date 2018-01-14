@@ -6,7 +6,9 @@
 		"typescript-workshop": "bin/typescript-workshop"
 	},
 	"main": "index.js",
-	"contributors": ["Victor Magalhães (https://github.com/vhfmag)"],
+	"contributors": [
+		"Victor Magalhães (https://github.com/vhfmag)"
+	],
 	"scripts": {
 		"build": "tsc",
 		"start": "./bin/typescript-workshop",
