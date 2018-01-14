@@ -1,25 +1,15 @@
-// declare module "workshopper-exercise" {
-// 	type Exercise = {
+declare type CheckFunction = (messages: string[]) => boolean;
 
-// 	};
+declare type ProblemCallback = (
+	err: Error | null,
+	success: boolean,
+	message?: string,
+) => void;
 
-// 	type ExerciseBuilder = () => Exercise;
-// 	const builder: ExerciseBuilder;
-// 	export = builder;
-// }
-
-// declare module "workshopper-adventure" {
-// 	interface WAConfig {
-// 		name: string;
-// 		title: string;
-// 		substitle?: string;
-// 		appDir: string;
-// 		exerciseDir: string;
-// 		menuItems: any[];
-// 	}
-
-// 	type WABuilder = (config: WAConfig) => void;
-// 	const builder: WABuilder;
-
-// 	export = builder;
-// }
+declare interface Problem {
+	requireSubmission?: boolean;
+	problem: {
+		file: string;
+	};
+	verify(args: any[], cb: ProblemCallback): void;
+}
