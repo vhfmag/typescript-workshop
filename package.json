@@ -1,0 +1,24 @@
+{
+	"name": "typescript-workshop",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"run": "tsc && cd dist && node index.js || 1 && cd ..",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/vhfmag/typescript-workshop"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@types/node": "^9.3.0",
+		"prettier": "^1.10.2",
+		"tslint": "^5.9.1",
+		"typescript": "^2.6.2",
+		"workshopper-adventure": "^6.0.3",
+		"workshopper-exercise": "^3.0.1"
+	}
+}

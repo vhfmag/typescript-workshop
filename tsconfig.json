@@ -1,0 +1,25 @@
+{
+	"compilerOptions": {
+		"jsx": "react",
+		"target": "es2017",
+		"module": "commonjs",
+		"types": [
+			"node"
+		],
+		"skipLibCheck": true,
+		"noUnusedLocals": true,
+		"lib": [
+			"es2017"
+		],
+		"moduleResolution": "node",
+		"noUnusedParameters": true,
+		"experimentalDecorators": true,
+		"strict": true
+	},
+	"include": [
+		"**/*"
+	],
+	"exclude": [
+		"node_modules"
+	]
+}
