@@ -13,6 +13,7 @@
 		"build": "tsc",
 		"start": "./bin/typescript-workshop",
 		"build-and-start": "npm run build && npm run start",
+		"prepublish": "npm run build",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"repository": {
