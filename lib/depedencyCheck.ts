@@ -9,7 +9,14 @@ export function depedencyCheck(pkgName: string): CheckFunction {
 			messages.push(chalk.red("  - No package.json!!!"));
 			return false;
 		}
-		if (Object.keys(pkg.dependencies).indexOf(pkgName) === -1) {
+
+		const depedencies = Object.assign(
+			{},
+			pkg.depedencies || {},
+			pkg.devDepedencies || {},
+		);
+
+		if (Object.keys(depedencies).indexOf(pkgName) === -1) {
 			messages.push(
 				"  - Dependency in package.json: " +
 					chalk.red(pkgName) +
