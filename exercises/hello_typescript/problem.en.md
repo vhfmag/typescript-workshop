@@ -9,6 +9,7 @@ Math.sqrt(4);
 Math.sqrt("16");
 Math.sqrt("Typescript");
 Math.sqrt({});
+Math.sqrt(true);
 Math.sqrt(new Date());
 ```
 
