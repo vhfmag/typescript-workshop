@@ -67,12 +67,14 @@ export function validateCompilerOptions(
 
 		if (errors.length === 0) {
 			messages.push(
-				`\t- ${chalk.green("{tests.typescript.valid_config_file}")}`,
+				`\t- ${chalk.green("{tests.typescript.valid_config_file}")} ✔`,
 			);
 			return true;
 		} else {
 			messages.push(
-				`\t- ${chalk.red("{tests.typescript.invalid_config_file}")}`,
+				`\t- ${chalk.red(
+					"{tests.typescript.invalid_config_file}",
+				)} [?]`,
 			);
 
 			for (const error of errors) {
@@ -98,12 +100,12 @@ export function validateTypescriptFile(
 
 		if (errors.length === 0) {
 			messages.push(
-				`\t- ${chalk.green("{tests.typescript.valid_file}")}`,
+				`\t- ${chalk.green("{tests.typescript.valid_file}")} ✔`,
 			);
 			return true;
 		} else {
 			messages.push(
-				`\t- ${chalk.red("{tests.typescript.invalid_file}")}`,
+				`\t- ${chalk.red("{tests.typescript.invalid_file}")} [?]`,
 			);
 
 			for (const error of errors) {
