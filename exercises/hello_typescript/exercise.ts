@@ -1,6 +1,6 @@
 import * as path from "path";
 import { checkAll } from "../../lib/checkAll";
-import { depedencyCheck } from "../../lib/depedencyCheck";
+import { dependencyCheck } from "../../lib/depedencyCheck";
 import { fileCheck } from "../../lib/fileCheck";
 
 module.exports = function() {
@@ -10,7 +10,7 @@ module.exports = function() {
 		verify: function(_, cb) {
 			checkAll(
 				[
-					depedencyCheck("typescript"),
+					dependencyCheck("typescript", "^2.6.2"),
 					fileCheck("index.ts"),
 					fileCheck("index.js"),
 				],
