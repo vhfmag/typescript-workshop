@@ -1,3 +1,5 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![Travis](https://img.shields.io/travis/vhfmag/typescript-workshop.svg)]() [![npm](https://img.shields.io/npm/v/typescript-workshop.svg)]()
+
 # Typescript Workshop
 
 A [nodeschool](https://nodeschool.io) workshop for learning the basics of [Typescript](https://typescriptlang.com), built with Typescript and [workshopper-adventure](https://github.com/workshopper/workshopper-adventure).
