@@ -2,7 +2,7 @@
 
 Typescript é uma extensão tipada do Javascript, que aumenta a segurança do código e proporciona ferramentas avançadas para desenvolvedores, como sugestões em códigos em editores de texto. Com extensão, se quer dizer que todo arquivo Javascript válido já é um arquivo Typescript válido.
 
-Para esse exercísio, inicie um pacote node (`npm init` ou `yarn init`), instale o typescript (`npm i -d typescript` ou `yarn add -D typescript`) e crie um arquiv `index.ts` com o seguinte conteúdo:
+Para esse exercísio, inicie um pacote node (`npm init` ou `yarn init`), instale o typescript 2.6.2 ou maior (`npm i -d typescript` ou `yarn add -D typescript`) e crie um arquivo `index.ts` com o seguinte conteúdo:
 
 ```typescript
 Math.sqrt(4);

@@ -2,7 +2,7 @@
 
 Typescript is a typed superset for Javascript, increasing type safety and providing advanced tooling for developers, such as autocomplete on text editors. Superset means that every valid Javascript file is already a valid Typescript file.
 
-For this exercise, start a node package (`npm init` or `yarn init`), install typescript (`npm i -d typescript` or `yarn add -D typescript`) and create a `index.ts` file with the following content:
+For this exercise, start a node package (`npm init` or `yarn init`), install typescript 2.6.2 or greater (`npm i -d typescript ^2.6.2` or `yarn add -D typescript ^2.6.2`) and create a `index.ts` file with the following content:
 
 ```typescript
 Math.sqrt(4);
