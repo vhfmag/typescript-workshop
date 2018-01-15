@@ -1,0 +1,19 @@
+language: node_js
+
+node_js:
+- node
+
+before_deploy: npx tsc -p tsconfig.json
+
+deploy:
+  provider: npm
+  email: victorhfmag@gmail.com
+  api_key:
+    secure: THhPBQpivmJX0r9kr6pESGhOfdu2UtnDO4L3HVRv1SC6fmrrnwtC9lnPtwlwbW+wCDzydt5pM56IszFR6sydhIy7FpsoYA4CP90kejgpyYD1L6r/eaBeNWpkTm7Jq86WYtgYy6X5lJf5uBN1VROZX31bSXah+LB3HMXb+l1NB8P5RoSFYOoR+kPX5daz4d1rkSi7Qhp0ADH0b8/u7m+LRu+EJ1e01G3gbKputD1+UrbQStDJIZtu0FzRP+6mbtBCctaxcdF68u0Lc1sFlY2hDW2Ju4Df5KMVoaBOCmO0OlQlPlPfQ1H4s2uBp7YGzOVJAMnguKh2NZ+3ke9ioC7wkcNQrAHDOuLQXKl96pTbEB2Coc3Ror2QvtYLThiXLI4HncXREHRhUvToFOQGD5ywySrlkzEvNQHH7ljFDJLDeOBSZSWOuoPzyFWuJFkwI4VkM02nQfEkT3vvw1m5ShzF/BfQJdIMrk6FEaOiMIX4VzSyh7f4igZYzA45S2e6HlKsU9LR3HpuKP5MwSDSNzWAnGIFd6L2WQo1yG8Fqn0BZTCHJhlTuiV0Yun6VFLrzUSrOFGD61zaVKSxZuV4VIU76rULx/VWkFI2XRUUQxae0yhdStw4mRPzpWiFN4R7q2/RBjAXWTI6w2E3Wtd1IqzpZPB1TSRC7FcNmUPJPEmFTAs=
+  on:
+    tags: true
+    branch: master
+
+cache:
+  directories:
+  - node_modules
