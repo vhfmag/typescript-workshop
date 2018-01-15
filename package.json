@@ -6,9 +6,7 @@
 		"typescript-workshop": "bin/typescript-workshop"
 	},
 	"main": "index.js",
-	"contributors": [
-		"Victor Magalhães (https://github.com/vhfmag)"
-	],
+	"contributors": ["Victor Magalhães (https://github.com/vhfmag)"],
 	"scripts": {
 		"build": "tsc",
 		"start": "./bin/typescript-workshop",
@@ -26,11 +24,12 @@
 	"author": "Victor Magalhães",
 	"license": "MIT",
 	"dependencies": {
-		"@types/node": "^9.3.0",
 		"chalk": "^2.3.0",
-		"prettier": "^1.10.2",
-		"tslint": "^5.9.1",
 		"typescript": "^2.6.2",
 		"workshopper-adventure": "^6.0.3"
+	},
+	"devDependencies": {
+		"@types/node": "^9.3.0",
+		"prettier": "^1.10.2"
 	}
 }
