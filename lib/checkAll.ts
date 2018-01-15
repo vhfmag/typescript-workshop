@@ -2,9 +2,9 @@ import chalk from "chalk";
 
 export function checkAll(
 	checks: CheckFunction[],
-	success: string,
-	error: string,
 	cb: ProblemCallback,
+	success: string = "{solution.pass.message}",
+	error: string = "{solution.fail.message}",
 ) {
 	const messages = ["Checking Requirements:"];
 	const total = checks.length;
@@ -16,9 +16,11 @@ export function checkAll(
 	}
 	messages.push("");
 	if (ok === total) {
-		messages.push(chalk.green("{{ee.success}}") + "\n\n" + success);
+		messages.push(
+			chalk.green("{{solution.pass.title}}") + "\n\n" + success,
+		);
 	} else {
-		messages.push(chalk.red("{{ee.fail}}") + "\n\n" + error);
+		messages.push(chalk.red("{{solution.fail.title}}") + "\n\n" + error);
 	}
 	messages.push("");
 	cb(null, ok === total, messages.join("\n"));

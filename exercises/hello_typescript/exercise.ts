@@ -14,9 +14,9 @@ module.exports = function() {
 					fileCheck("index.ts"),
 					fileCheck("index.js"),
 				],
+				cb,
 				"{exercises.hello_typescript.success}",
 				"{exercises.hello_typescript.fail}",
-				cb,
 			);
 		},
 	};
