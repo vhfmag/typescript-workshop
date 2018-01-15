@@ -6,12 +6,14 @@
 		"typescript-workshop": "bin/typescript-workshop"
 	},
 	"main": "index.js",
-	"contributors": ["Victor Magalhães (https://github.com/vhfmag)"],
+	"contributors": [
+		"Victor Magalhães (https://github.com/vhfmag)"
+	],
 	"scripts": {
 		"build": "tsc",
 		"start": "./bin/typescript-workshop",
 		"build-and-start": "npm run build && npm run start",
-		"prepublish": "npm run build"
+		"prepare": "npm run build"
 	},
 	"repository": {
 		"type": "git",
