@@ -7,10 +7,10 @@ export function fileCheck(file: string): CheckFunction {
 		try {
 			fs.statSync(path.join(process.cwd(), file));
 		} catch (err) {
-			messages.push("  - " + chalk.red(file) + " [?]");
+			messages.push("\t- " + chalk.red(file) + " [?]");
 			return false;
 		}
-		messages.push("  - " + chalk.green(file) + " ✔");
+		messages.push("\t- " + chalk.green(file) + " ✔");
 		return true;
 	};
 }

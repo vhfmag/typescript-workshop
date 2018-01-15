@@ -10,7 +10,7 @@ export function dependencyCheck(
 		try {
 			var pkg = require(path.join(process.cwd(), "package.json"));
 		} catch (e) {
-			messages.push(chalk.red("  - {tests.dependency.no_package_json}"));
+			messages.push(chalk.red("\t- {tests.dependency.no_package_json}"));
 			return false;
 		}
 
@@ -24,7 +24,7 @@ export function dependencyCheck(
 
 		if (!pkgVersion) {
 			messages.push(
-				"  - {tests.dependency.label}: " +
+				"\t- {tests.dependency.label}: " +
 					chalk.red(pkgName) +
 					" [?] ({tests.dependency.missing})",
 			);
@@ -40,7 +40,7 @@ export function dependencyCheck(
 				!semver.satisfies(actualVersion, semverRequirement)
 			) {
 				messages.push(
-					"  - {tests.dependency.label}: " +
+					"\t- {tests.dependency.label}: " +
 						chalk.red(pkgName) +
 						` [?] ({tests.dependency.incorrect_version} '${actualVersion}', {tests.dependency.should_satisfy} '${semverRequirement}')`,
 				);
@@ -49,7 +49,7 @@ export function dependencyCheck(
 		}
 
 		messages.push(
-			"  - {tests.dependency.label}: " + chalk.green(pkgName) + " ✔",
+			"\t- {tests.dependency.label}: " + chalk.green(pkgName) + " ✔",
 		);
 		return true;
 	};
