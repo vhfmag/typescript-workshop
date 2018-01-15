@@ -10,5 +10,14 @@
 			"fail":
 				"Algo está faltando. Para ver as instruções novamente, execute `typescript-workshop print`"
 		}
+	},
+	"tests": {
+		"dependency": {
+			"label": "Dependência em package.json",
+			"incorrect_version": "versão incorreta",
+			"should_satisfy": "precisa satisfazer",
+			"missing": "ausente",
+			"no_package_json": "Não existe package.json!!!"
+		}
 	}
 }

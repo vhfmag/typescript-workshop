@@ -10,5 +10,14 @@
 			"fail":
 				"There is something missing. To see instructions again, run `typescript-workshop print`"
 		}
+	},
+	"tests": {
+		"dependency": {
+			"label": "Dependency in package.json",
+			"incorrect_version": "incorrect version",
+			"should_satisfy": "should satisfy",
+			"missing": "missing",
+			"no_package_json": "No package.json!!!"
+		}
 	}
 }
