@@ -1,0 +1,14 @@
+{
+	"ee": {
+		"fail": "FALHA!",
+		"success": "SUCESSO!"
+	},
+	"exercises": {
+		"hello_typescript": {
+			"success":
+				"Você instalou `typescript` com sucesso e criou o seu primeiro arquivo Typescript!",
+			"fail":
+				"Algo está faltando. Para ver as instruções novamente, execute `typescript-workshop print`"
+		}
+	}
+}
