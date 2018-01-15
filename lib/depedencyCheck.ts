@@ -1,12 +1,16 @@
 import chalk from "chalk";
+import * as semver from "semver";
 import * as path from "path";
 
-export function depedencyCheck(pkgName: string): CheckFunction {
+export function dependencyCheck(
+	pkgName: string,
+	semverRequirement?: string,
+): CheckFunction {
 	return function(messages: string[]) {
 		try {
 			var pkg = require(path.join(process.cwd(), "package.json"));
 		} catch (e) {
-			messages.push(chalk.red("  - No package.json!!!"));
+			messages.push(chalk.red("  - {tests.dependency.no_package_json}"));
 			return false;
 		}
 
@@ -16,16 +20,36 @@ export function depedencyCheck(pkgName: string): CheckFunction {
 			pkg.devDependencies || {},
 		);
 
-		if (Object.keys(dependencies).indexOf(pkgName) === -1) {
+		const pkgVersion = dependencies[pkgName];
+
+		if (!pkgVersion) {
 			messages.push(
-				"  - Dependency in package.json: " +
+				"  - {tests.dependency.label}: " +
 					chalk.red(pkgName) +
-					" [?]",
+					" [?] ({tests.dependency.missing})",
 			);
 			return false;
+		} else {
+			const actualVersion = require(path.join(
+				process.cwd(),
+				`node_modules/${pkgName}/package.json`,
+			)).version;
+
+			if (
+				semverRequirement &&
+				!semver.satisfies(actualVersion, semverRequirement)
+			) {
+				messages.push(
+					"  - {tests.dependency.label}: " +
+						chalk.red(pkgName) +
+						` [?] ({tests.dependency.incorrect_version} '${actualVersion}', {tests.dependency.should_satisfy} '${semverRequirement}')`,
+				);
+				return false;
+			}
 		}
+
 		messages.push(
-			"  - Dependency in package.json: " + chalk.green(pkgName) + " ✔",
+			"  - {tests.dependency.label}: " + chalk.green(pkgName) + " ✔",
 		);
 		return true;
 	};
