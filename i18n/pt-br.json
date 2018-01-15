@@ -1,15 +1,7 @@
 {
-	"ee": {
-		"fail": "FALHA!",
-		"success": "SUCESSO!"
-	},
-	"exercises": {
-		"hello_typescript": {
-			"success":
-				"Você instalou `typescript` com sucesso e criou o seu primeiro arquivo Typescript!",
-			"fail":
-				"Algo está faltando. Para ver as instruções novamente, execute `typescript-workshop print`"
-		}
+	"general": {
+		"expected": "esperado",
+		"found": "encontrado"
 	},
 	"tests": {
 		"dependency": {
@@ -18,6 +10,14 @@
 			"should_satisfy": "precisa satisfazer",
 			"missing": "ausente",
 			"no_package_json": "Não existe package.json!!!"
+		},
+		"typescript": {
+			"valid_file": "Arquivo sem erros de tipo",
+			"invalid_file": "Erros foram encontrados no seu arquivo:",
+			"valid_config_file": "tsconfig.json correto",
+			"invalid_config_file": "tsconfig.json inadequado segundo especificação",
+			"invalid_option_type": "Opção do compilador tem tipo inválido",
+			"invalid_option_value": "Opção do compilador tem valor inválido"
 		}
 	}
 }

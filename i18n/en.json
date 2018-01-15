@@ -1,15 +1,7 @@
 {
-	"ee": {
-		"fail": "FAIL!",
-		"success": "SUCCESS!"
-	},
-	"exercises": {
-		"hello_typescript": {
-			"success":
-				"You have succesfully installed `typescript` and created your first Typescript file!",
-			"fail":
-				"There is something missing. To see instructions again, run `typescript-workshop print`"
-		}
+	"general": {
+		"expected": "expected",
+		"found": "found"
 	},
 	"tests": {
 		"dependency": {
@@ -18,6 +10,14 @@
 			"should_satisfy": "should satisfy",
 			"missing": "missing",
 			"no_package_json": "No package.json!!!"
+		},
+		"typescript": {
+			"valid_file": "File free of errors",
+			"invalid_file": "Errors have been found in your file:",
+			"valid_config_file": "tsconfig.json is correct",
+			"invalid_config_file": "tsconfig.json is not according to specification",
+			"invalid_option_type": "Compiler options has invalid type",
+			"invalid_option_value": "Compiler options has invalid value"
 		}
 	}
 }
