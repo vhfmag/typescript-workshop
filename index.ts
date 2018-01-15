@@ -6,7 +6,7 @@ const workshop = new Workshopper({
 	languages: ["en", "pt-br"],
 });
 
-workshop.addAll(["Hello, Typescript!"]);
+workshop.addAll(["Hello, Typescript!", "Basic Types"]);
 
 // workshop.execute(process.argv.slice(2));
 module.exports = workshop;
