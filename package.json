@@ -10,7 +10,7 @@
 		"Victor Magalhães (https://github.com/vhfmag)"
 	],
 	"scripts": {
-		"build": "tsc",
+		"build": "npx tsc",
 		"start": "./bin/typescript-workshop",
 		"build-and-start": "npm run build && npm run start",
 		"prepare": "npm run build"
