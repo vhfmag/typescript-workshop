@@ -19,12 +19,6 @@
             "options": {
                 "parser": "babylon"
             }
-        },
-        {
-            "files": "*.json",
-            "options": {
-                "parser": "json"
-            }
         }
     ]
 }
